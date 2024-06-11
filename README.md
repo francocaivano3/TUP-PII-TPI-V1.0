@@ -1,3 +1,8 @@
+<style>
+  body {
+    background-color:red;
+  }
+</style>
 Franco Berlochi 53583 <br>
 <b>Franco Caivano 53650</b> <br>
 Sebastian Corfield 53339<br>
