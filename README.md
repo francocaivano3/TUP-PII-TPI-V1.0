@@ -1,7 +1,7 @@
 
-<p style="color:red; display: inline">Franco Berlochi 53583</p> <br>
+<b>Franco Berlochi 53583</b><br>
 <b>Franco Caivano 53650</b> <br>
-Sebastian Corfield 53339<br>
+<b>Sebastian Corfield 53339</b><br>
 Comisión 1TUP7 <br>
 2024<br>
 Programación 2 <br>
