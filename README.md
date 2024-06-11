@@ -1,9 +1,5 @@
-<style>
-  * {
-    color: lightblue;
-  }
-</style>
-Franco Berlochi 53583 <br>
+
+<p style="color:red">Franco Berlochi 53583</p> <br>
 <b>Franco Caivano 53650</b> <br>
 Sebastian Corfield 53339<br>
 Comisión 1TUP7 <br>
