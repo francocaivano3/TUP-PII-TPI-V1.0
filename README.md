@@ -1,6 +1,6 @@
 <style>
-  body {
-    background-color:red;
+  * {
+    color: lightblue;
   }
 </style>
 Franco Berlochi 53583 <br>
