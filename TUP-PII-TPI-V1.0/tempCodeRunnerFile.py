@@ -1,0 +1,1 @@
+partida1.mazo.append(pregunta1)
