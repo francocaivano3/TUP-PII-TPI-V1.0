@@ -16,8 +16,6 @@ class Jugador:
     def nombre(self):
         return self.__nombre
 
-
-    
     @property
     def id(self):
         return self.__id

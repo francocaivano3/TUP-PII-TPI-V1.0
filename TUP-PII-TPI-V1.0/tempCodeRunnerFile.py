@@ -1,2 +1,1 @@
-
-from jugador import Jugador
+partida1.mazo.append(pregunta1)

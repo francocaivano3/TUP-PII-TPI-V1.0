@@ -6,7 +6,7 @@ class Partida():
     def __init__(self):
         self.__jugadores: list = [] 
         self.__ranking: list = []
-        self.__mazo: list = ["a"]
+        self.__mazo: list = []
         self.__tarjetasUtilizadas: list = []
         
 
@@ -16,21 +16,18 @@ class Partida():
 
     @property
     def mazo(self):
-        self.__mazo
+        return self.__mazo
     
     @property
     def tarjetasUtilizadas(self):
         return self.__tarjetasUtilizadas
     
-    @property 
+    @property
     def listaJugadores(self):
         return self.__jugadores
-  
 
-    @listaJugadores.setter
     def ingresarJugadores(self, jugador: Jugador):
-        self.__jugadores.append = jugador.nombre
-        print(self.jugadores)
+        self.__jugadores.append(jugador.nombre)
 
   
     
