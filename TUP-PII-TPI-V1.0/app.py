@@ -31,10 +31,18 @@ def nuevoJuego():
 
     
     while len(nuevaPartida.mazo) > 0:
+        
         for jugador in nuevaPartida.listaJugadores:
+            
             if jugador.turno == True:
+
+                if jugador.cantRespuestasAcertadas == 3: #Comodín / Quitarle puntos a otro / Quitarle el turno
+                    tarjeta = nuevaPartida.generarPregunta()
+                    jugador.responder(tarjeta, nuevaPartida)
+                
                 tarjeta = nuevaPartida.generarPregunta()
                 jugador.responder(tarjeta, nuevaPartida)
+                
     print('Ha acabado el juego.\n')
     
     nuevaPartida.mostrarRanking(nuevaPartida)
