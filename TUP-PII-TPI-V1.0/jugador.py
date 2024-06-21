@@ -6,11 +6,10 @@ class Jugador:
     def __init__(self, nombre:str) -> None:
         self.__nombre:str = nombre
         self.__turno:bool = True
-        self.__cantRespuestaAcertadas:int = None
+        self.__cantRespuestasAcertadas:int = 0
         self.__puntuacion:int = 0
         self.__id:int = Jugador.jugador_id()
           
-        
     
     @property
     def nombre(self):
@@ -20,24 +19,31 @@ class Jugador:
     def id(self):
         return self.__id
     
-    
     @property
     def turno(self):
         return self.__turno
     
     @property
     def cantRespuestasAcertadas(self):
-        return self.__cantRespuestaAcertadas 
+        return self.__cantRespuestasAcertadas 
+    
+    @cantRespuestasAcertadas.setter
+    def cantRespuestasAcertadas(self, nuevoValor):
+        self.__cantRespuestasAcertadas = nuevoValor
     
     @property 
     def puntuacion(self):
         return self.__puntuacion
 
+    @puntuacion.setter
+    def puntuacion(self, nuevaPuntuacion):
+        self.__puntuacion = nuevaPuntuacion
 
     @classmethod
     def jugador_id(cls):
         cls.__id += 1
         return cls.__id 
+    
     @classmethod
     def validar_id(cls,id):
         if id in cls.__id  :
@@ -47,21 +53,23 @@ class Jugador:
     def sacarTarjeta(self, partida):
         partida.generarPregunta()
         
-    def responder(self, tarjeta:Tarjeta):
-        from partida import Partida
+    def responder(self, tarjeta:Tarjeta, partida):
+
         respuestaSeleccionada = input('Seleccione la opción correcta: ')
         while respuestaSeleccionada != "1" and respuestaSeleccionada != "2" and respuestaSeleccionada != "3" and respuestaSeleccionada != "4":
             print('Respuesta incorrecta.')
             respuestaSeleccionada = input('Seleccione la opción correcta: ')
             
 
-        if respuestaSeleccionada == tarjeta.respuestaCorrecta:
+        if tarjeta.opciones[int(respuestaSeleccionada)-1][1]:
             print('Respuesta correcta!')
-            Partida.modificarPuntuacion(self, tarjeta)
+            self.puntuacion = partida.modificarPuntuacion(self, tarjeta)
+            self.cantRespuestasAcertadas = self.cantRespuestasAcertadas + 1
+            print(f"Cantidad de respuestas acertadas de {self.nombre}: {self.cantRespuestasAcertadas}")
         else:
-            print('Respuesta incorrecta')
+            print(f'Incorrecto, la respuesta es: {tarjeta.respuestaCorrecta}')
 
-        return self.puntuacion 
+        print(f"La puntuación de {self.nombre} ahora es: {self.puntuacion}") 
          #ver si anda sin repetir dos veces el input
 
 

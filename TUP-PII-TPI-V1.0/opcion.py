@@ -1,7 +1,7 @@
 class Opcion:
     def __init__(self, opcion:str, correcta:bool) -> None:
         self.__opcion = opcion
-        self.__correcta = None #agregar al UML
+        self.__correcta = correcta #agregar al UML
 
     @property
     def opcion(self):
@@ -20,4 +20,4 @@ class Opcion:
         self.__correcta = valor
 
     def __str__(self):
-        return f'{self.__opcion}'
+        return f'{self.opcion} {self.correcta}'

@@ -27,18 +27,24 @@ class Partida():
         return self.__jugadores
 
     def ingresarJugadores(self, jugador: Jugador):
-        self.__jugadores.append(jugador.nombre)
+        self.__jugadores.append(jugador)
 
   
-    
     def generarPregunta(self):
         tarjetaSacada = random.choice(self.mazo)
         self.mazo.remove(tarjetaSacada)
         print(tarjetaSacada)
         return tarjetaSacada
-
+        
+        
     def modificarPuntuacion(self, jugador:Jugador, tarjeta:Tarjeta):
-        jugador.puntuacion += tarjeta.categoria.valor
-       
+        valorTarjeta = tarjeta.categoria.valor
+        return jugador.puntuacion + valorTarjeta
     
+    
+    def mostrarRanking(self, partida):
+        ranking = sorted(partida.listaJugadores, key=lambda x: x.puntuacion, reverse=True)
+        print("Ranking:")
+        for indice, jugador in enumerate(ranking):
+            print(f"{indice + 1}. Nombre: {jugador.nombre}, puntuación: {jugador.puntuacion}")
 
