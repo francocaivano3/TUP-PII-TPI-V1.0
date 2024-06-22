@@ -58,7 +58,7 @@ class Jugador:
         respuestaSeleccionada = input('Seleccione la opción correcta: ')
         while respuestaSeleccionada != "1" and respuestaSeleccionada != "2" and respuestaSeleccionada != "3" and respuestaSeleccionada != "4":
             print('Respuesta incorrecta.')
-            respuestaSeleccionada = input('Seleccione la opción correcta: ')
+            respuestaSeleccionada = input('Seleccione una opción válida: ')
             
 
         if tarjeta.opciones[int(respuestaSeleccionada)-1][1]:
