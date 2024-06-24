@@ -7,12 +7,14 @@
 Comisión 1TUP7 <br>
 2024<br>
 Programación 2 <br>
+
+<h2>Juego</h2>
 Estamos desarrollando un juego de mesa (preguntas y respuestas)<br>
 https://github.com/francocaivano3/TUP-PII-TPI-V1.0
 
 Juego de preguntas y respuestas. 4 jugadores, 10 preguntas cada uno. <br>
 5 categorías:<br>
-<li>Cine: 6 puntos<br></li>
+<li>Cine: 6 puntos</li><br>
 <li>Programación: 5 puntos</li><br>
 <li>Geografía: 4 puntos</li><br>
 <li>Deportes: 3 puntos</li><br>
