@@ -4,8 +4,6 @@ from opcion import Opcion
 from partida import Partida
 from tarjeta import Tarjeta
 
-#Puntuaciones= ciencia 2, deporte 3, geografia 4, programacion 5, cine 6
-
 
 #Pregunta 1
 pregunta1 = Tarjeta("¿Cuál es el país más grande del mundo en territorio?", Categoria("BLUE", "Geografía", 4))

@@ -7,57 +7,66 @@ def agregarMazo(nuevaPartida:Partida, listaPreguntas:list):
         for pregunta in listaPreguntas:
             nuevaPartida.mazo.append(pregunta)
 
+print("\nBienvenidos/as.")
+
 def menu():
-    print("Bienvenidos/as.\n1- Iniciar juego.\n2- Mostrar puntuaciones\n3- Finalizar")
+    print("\n1- Iniciar nuevo juego.\n2- Mostrar puntuaciones\n3- Finalizar")
+    
 
 def nuevoJuego():
-    nuevaPartida = Partida()
     agregarMazo(nuevaPartida, listaPreguntas)
     
-    jugador1 = Jugador(input("Ingrese el nombre del Jugador 1: ")) #Simplificarlo con un for
-    nuevaPartida.ingresarJugadores(jugador1)
-    print(f"Se ha añadido al Jugador 1: '{jugador1.nombre}'\n")
 
-    jugador2 = Jugador(input("Ingrese el nombre del Jugador 2: "))
-    nuevaPartida.ingresarJugadores(jugador2)
-    print(f"Se ha añadido al Jugador 2: '{jugador2.nombre}'\n")
+    for i in range(1, 5):
+        print("\n")
+        jugador = Jugador(input(f"Ingrese el nombre del jugador {i}: "))
+        nuevaPartida.ingresarJugadores(jugador)
+        print(f"Se ha añadido el jugador número {i}: {jugador.nombre}")
 
-    jugador3 = Jugador(input("Ingrese el nombre del Jugador 3: "))
-    nuevaPartida.ingresarJugadores(jugador3)
-    print(f"Se ha añadido al Jugador 3: '{jugador3.nombre}'\n")
 
-    jugador4 = Jugador(input("Ingrese el nombre del Jugador 4: "))
-    nuevaPartida.ingresarJugadores(jugador4)
-    print(f"Se ha añadido al Jugador 4: '{jugador4.nombre}'\n")
-
-    
     while len(nuevaPartida.mazo) > 0:
         
         for jugador in nuevaPartida.listaJugadores:
             
-            if jugador.turno == True:
+            if jugador.turno == True and len(nuevaPartida.mazo) > 0:
                 
-                if jugador.cantRespuestasAcertadas == 3: #Comodín / Quitarle puntos a otro / Quitarle el turno
+                if jugador.cantRespuestasAcertadas == 3: 
+                    print("\n════════════════════════════════════════════════════════")
+                    print(f"El jugador {jugador.nombre} tiene el beneficio del turno extra!")
+                    print("════════════════════════════════════════════════════════")
                     tarjeta = nuevaPartida.generarPregunta()
-                    print(f"Turno de {jugador.nombre}")
+                    print(f"Turno del jugador N°{jugador.id}: {jugador.nombre}")
                     jugador.responder(tarjeta, nuevaPartida)
                 
                 tarjeta = nuevaPartida.generarPregunta()
-                print(f"Turno de {jugador.nombre}")
+                print(f"Turno del jugador N°{jugador.id}: {jugador.nombre}")
                 jugador.responder(tarjeta, nuevaPartida)
-                
-    print('Ha acabado el juego.\n')
-    
-    nuevaPartida.mostrarRanking(nuevaPartida)
 
+    print("\n════════════════════")    
+    print('Ha acabado el juego.')
+    print("════════════════════")
 
 
 while True:
     menu()
-    opcion = input("Ingrese una opción: ")
-    if opcion == "1":
+    opt = input("Ingrese una opción: ")
+    
+    if opt == "1":
+        nuevaPartida = Partida()
         nuevoJuego()
+
+    elif opt == "2":
+        try: 
+             nuevaPartida.mostrarRanking(nuevaPartida)   
+        except:
+            print("\nPrimero debe jugar una partida")
+
+    elif opt == "3":
+        print("Gracias por jugar!")
         break
+
+    else:
+        print("Ingrese una opción válida")
 
 
 
