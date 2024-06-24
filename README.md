@@ -11,11 +11,11 @@ Estamos desarrollando un juego de mesa (preguntas y respuestas)<br>
 https://github.com/francocaivano3/TUP-PII-TPI-V1.0
 
 Juego de preguntas y respuestas. 4 jugadores, 10 preguntas cada uno. <br>
-5 categorías:<br>
-Cine: 6 puntos<br>
-Programación: 5 puntos<br>
-Geografía: 4 puntos<br>
-Deportes: 3 puntos<br>
-Ciencia: 2 puntos<br>
+<ul>5 categorías:</ul><br>
+<li>Cine: 6 puntos<br></li>
+<li>Programación: 5 puntos</li><br>
+<li><Geografía: 4 puntos</li><br>
+<li>Deportes: 3 puntos</li><br>
+<li>Ciencia: 2 puntos</li><br>
 
 Gana el que más puntos hace. 
