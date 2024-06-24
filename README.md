@@ -10,7 +10,7 @@ Programación 2 <br>
 
 <h2>Juego</h2>
 Estamos desarrollando un juego de mesa (preguntas y respuestas)<br>
-https://github.com/francocaivano3/TUP-PII-TPI-V1.0
+https://github.com/francocaivano3/TUP-PII-TPI-V1.0<br>
 
 Juego de preguntas y respuestas. 4 jugadores, 10 preguntas cada uno. <br>
 5 categorías:<br>
