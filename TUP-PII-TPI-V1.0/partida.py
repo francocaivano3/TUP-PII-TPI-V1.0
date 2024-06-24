@@ -46,7 +46,7 @@ class Partida():
     
     
     def mostrarRanking(self, partida):
-        #hacer el lambda
+        ranking = sorted(partida.listaJugadores, key=lambda x: x.puntuacion, reverse=True)
         print("\nRanking:")
         for indice, jugador in enumerate(ranking):
             print(f"{indice + 1}. Nombre: {jugador.nombre}, puntuación: {jugador.puntuacion}")
