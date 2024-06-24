@@ -1,4 +1,5 @@
-<h1>Integrantes:</h1><br>
+<h1>Preguntas y Respuestas</h1><br>
+<h2>Integrantes:</h2><br>
 <b>Franco Berlochi 53583</b><br>
 <b>Franco Caivano 53650</b> <br>
 <b>Sebastian Corfield 53339</b><br>
