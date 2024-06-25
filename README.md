@@ -21,3 +21,6 @@ Juego de preguntas y respuestas. 4 jugadores, 10 preguntas cada uno. <br>
 <li>Ciencia: 2 puntos</li><br>
 
 Gana el que más puntos hace. 
+
+Aclaración: Se debe tener instalada la biblioteca colorama en py.
+En git bash escribir: pip install colorama
