@@ -50,7 +50,7 @@ def nuevoJuego():
 while True:
     menu()
     opt = input("Ingrese una opción: ")
-    
+
     if opt == "1":
         nuevaPartida = Partida()
         nuevoJuego()

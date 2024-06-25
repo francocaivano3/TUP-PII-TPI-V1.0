@@ -74,7 +74,7 @@ class Tarjeta():
         opcionesStr = '\n'.join(f'Opción {i+1}: {opcion[0]}' for i, opcion in enumerate(self.__opciones))
         print(self.colorCategoria())
         print(bordeSuperior)
-        return f'Tarjeta número: {self.numTarjeta}\nCategoría: {self.categoria}\n{self.pregunta}\nOpciones:\n{opcionesStr}\n{bordeInferior}'
+        return f'Tarjeta número: {self.numTarjeta}\n\nCategoría: {self.categoria}\n\n{self.pregunta}\nOpciones:\n\n{opcionesStr}\n{bordeInferior}'
         
      
       

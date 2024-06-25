@@ -70,7 +70,7 @@ opcion4 = Opcion("Protón", False)
 pregunta5.agregarOpcion(opcion4)
 
 
-pregunta6 = Tarjeta("¿Qué fenómeno es responsable de las estaciones del año?", Categoria("BLUE", "Geografía", 4))
+pregunta6 = Tarjeta("¿Qué fenómeno es responsable de las estaciones\n del año?", Categoria("BLUE", "Geografía", 4))
 opcion1 = Opcion("Inclinación del eje terrestre", True)
 pregunta6.agregarOpcion(opcion1)
 pregunta6.respuestaCorrecta = opcion1.opcion
@@ -115,7 +115,7 @@ pregunta9.agregarOpcion(opcion3)
 opcion4 = Opcion("Golf", False)
 pregunta9.agregarOpcion(opcion4)
 
-pregunta10 = Tarjeta("¿Qué equipo de fútbol ganó la Copa Mundial de la FIFA en 2018?", Categoria("ORANGE", "Deporte", 3))
+pregunta10 = Tarjeta("¿Qué equipo de fútbol ganó la Copa Mundial de la\n FIFA en 2018?", Categoria("ORANGE", "Deporte", 3))
 opcion1 = Opcion("Francia", True)
 pregunta10.agregarOpcion(opcion1)
 pregunta10.respuestaCorrecta = opcion1.opcion
@@ -126,7 +126,7 @@ pregunta10.agregarOpcion(opcion3)
 opcion4 = Opcion("Argentina", False)
 pregunta10.agregarOpcion(opcion4)
 
-pregunta11 = Tarjeta("¿Cuál de estas competiciones no pertenece al mundo del atletismo?", Categoria("ORANGE", "Deporte", 3))
+pregunta11 = Tarjeta("¿Cuál de estas competiciones no pertenece al mundo\n del atletismo?", Categoria("ORANGE", "Deporte", 3))
 opcion1 = Opcion("Copa del Mundo de la FIFA", True)
 pregunta11.agregarOpcion(opcion1)
 pregunta11.respuestaCorrecta = opcion1.opcion
@@ -193,7 +193,7 @@ opcion4 = Opcion("Atacama", False)
 pregunta16.agregarOpcion(opcion4)
 
 # Programación:
-pregunta17 = Tarjeta("¿Cuál de los siguientes no es un lenguaje de programación?", Categoria("YELLOW", "Programación", 5))
+pregunta17 = Tarjeta("¿Cuál de los siguientes no es un lenguaje de\n programación?", Categoria("YELLOW", "Programación", 5))
 opcion1 = Opcion("Photoshop", True)
 pregunta17.agregarOpcion(opcion1)
 pregunta17.respuestaCorrecta = opcion1.opcion
@@ -215,7 +215,7 @@ pregunta18.agregarOpcion(opcion3)
 opcion4 = Opcion("Hyperlinks and Text Markup Language", False)
 pregunta18.agregarOpcion(opcion4)
 
-pregunta19 = Tarjeta("¿Cuál es el símbolo utilizado para comentarios de una sola línea en Python?", Categoria("YELLOW", "Programación", 5))
+pregunta19 = Tarjeta("¿Cuál es el símbolo utilizado para \ncomentarios de una sola línea en Python?", Categoria("YELLOW", "Programación", 5))
 opcion1 = Opcion("#", True)
 pregunta19.agregarOpcion(opcion1)
 pregunta19.respuestaCorrecta = opcion1.opcion
@@ -238,7 +238,7 @@ opcion4 = Opcion("Java Syntax Object Naming", False)
 pregunta20.agregarOpcion(opcion4)
 
 # Cine:
-pregunta21 = Tarjeta("¿Quién interpretó a Harry Potter en las películas de Harry Potter?", Categoria("MAGENTA", "Cine", 2))
+pregunta21 = Tarjeta("¿Quién interpretó a Harry Potter \nen las películas de Harry Potter?", Categoria("MAGENTA", "Cine", 2))
 opcion1 = Opcion("Daniel Radcliffe", True)
 pregunta21.agregarOpcion(opcion1)
 pregunta21.respuestaCorrecta = opcion1.opcion
@@ -249,7 +249,7 @@ pregunta21.agregarOpcion(opcion3)
 opcion4 = Opcion("Tom Felton", False)
 pregunta21.agregarOpcion(opcion4)
 
-pregunta22 = Tarjeta("¿Cuál de estas películas fue dirigida por Steven Spielberg?", Categoria("MAGENTA", "Cine", 2))
+pregunta22 = Tarjeta("¿Cuál de estas películas fue dirigida \npor Steven Spielberg?", Categoria("MAGENTA", "Cine", 2))
 opcion1 = Opcion("E.T. el extraterrestre", True)
 pregunta22.agregarOpcion(opcion1)
 pregunta22.respuestaCorrecta = opcion1.opcion
@@ -260,7 +260,7 @@ pregunta22.agregarOpcion(opcion3)
 opcion4 = Opcion("El Señor de los Anillos", False)
 pregunta22.agregarOpcion(opcion4)
 
-pregunta23 = Tarjeta("¿Quién ganó el Premio de la Academia al Mejor Actor en 2020?", Categoria("MAGENTA", "Cine", 2))
+pregunta23 = Tarjeta("¿Quién ganó el Premio de la Academia al Mejor\n Actor en 2020?", Categoria("MAGENTA", "Cine", 2))
 opcion1 = Opcion("Joaquin Phoenix", True)
 pregunta23.agregarOpcion(opcion1)
 pregunta23.respuestaCorrecta = opcion1.opcion
@@ -271,7 +271,7 @@ pregunta23.agregarOpcion(opcion3)
 opcion4 = Opcion("Anthony Hopkins", False)
 pregunta23.agregarOpcion(opcion4)
 
-pregunta24 = Tarjeta("¿Qué película ganó el Premio de la Academia a la Mejor Película en 2021?", Categoria("MAGENTA", "Cine", 2))
+pregunta24 = Tarjeta("¿Qué película ganó el Premio de la Academia a la\n Mejor Película en 2021?", Categoria("MAGENTA", "Cine", 2))
 opcion1 = Opcion("Nomadland", True)
 pregunta24.agregarOpcion(opcion1)
 pregunta24.respuestaCorrecta = opcion1.opcion
@@ -327,7 +327,7 @@ pregunta28.agregarOpcion(opcion3)
 opcion4 = Opcion("Un operador lógico", False)
 pregunta28.agregarOpcion(opcion4)
 
-pregunta29 = Tarjeta("¿Quién fue el primer astronauta en caminar sobre la luna?", Categoria("GREEN", "Ciencia", 2))
+pregunta29 = Tarjeta("¿Quién fue el primer astronauta en caminar sobre\n la luna?", Categoria("GREEN", "Ciencia", 2))
 opcion1 = Opcion("Neil Armstrong", True)
 pregunta29.agregarOpcion(opcion1)
 pregunta29.respuestaCorrecta = opcion1.opcion
@@ -350,7 +350,7 @@ opcion4 = Opcion("Venecia", False)
 pregunta30.agregarOpcion(opcion4)
 
 pregunta31 = Tarjeta("¿Qué es una función en programación?", Categoria("YELLOW", "Programación", 5))
-opcion1  = Opcion("Un conjunto de instrucciones que realizan una tarea específica", True)
+opcion1  = Opcion("Un conjunto de instrucciones que realizan\n una tarea específica", True)
 pregunta31.agregarOpcion(opcion1)
 pregunta31.respuestaCorrecta = opcion1.opcion
 opcion2  = Opcion("Una variable de tipo numérico", False)
@@ -426,7 +426,7 @@ pregunta37.agregarOpcion(opcion3)
 opcion4 = Opcion("Brisbane", False)
 pregunta37.agregarOpcion(opcion4)
 
-pregunta38 = Tarjeta("¿Qué actor interpretó a Iron Man en las películas de Marvel?", Categoria("MAGENTA", "Cine", 2))
+pregunta38 = Tarjeta("¿Qué actor interpretó a Iron Man en las películas\n de Marvel?", Categoria("MAGENTA", "Cine", 2))
 opcion1 = Opcion("Robert Downey Jr.", True)
 pregunta38.agregarOpcion(opcion1)
 pregunta38.respuestaCorrecta = opcion1.opcion
@@ -449,15 +449,15 @@ opcion4 = Opcion("Orión", False)
 pregunta39.agregarOpcion(opcion4)
 
 
-pregunta40 = Tarjeta("En Python, ¿cuál de las siguientes opciones describe correctamente el comportamiento de los decoradores?", Categoria("YELLOW", "Programación", 5))
-opcion1 = Opcion("Los decoradores pueden ser utilizados para modificar la funcionalidad de una función o método sin cambiar su código fuente.", True)
+pregunta40 = Tarjeta("¿Cuál de las siguientes opciones es la forma \ncorrecta de definir una función en Python que \nacepta un argumento y retorna su cuadrado?", Categoria("YELLOW", "Programación", 5))
+opcion1 = Opcion("def square(x): return x**2", True)
 pregunta40.agregarOpcion(opcion1)
 pregunta40.respuestaCorrecta = opcion1.opcion
-opcion2 = Opcion("Los decoradores solo pueden modificar funciones, no métodos de clase.", False)
+opcion2 = Opcion("def square(x): return x^2", False)
 pregunta40.agregarOpcion(opcion2)
-opcion3 = Opcion("Los decoradores se aplican solo a las funciones definidas dentro de las clases.", False)
+opcion3 = Opcion("function square(x) { return x**2; }", False)
 pregunta40.agregarOpcion(opcion3)
-opcion4 = Opcion("Los decoradores deben ser definidos utilizando la palabra clave decorator antes de su nombre.", False)
+opcion4 = Opcion("function square(x): return x^2", False)
 pregunta40.agregarOpcion(opcion4)
 
 listaPreguntas = [pregunta1, pregunta2, pregunta3, pregunta4, pregunta5, pregunta6, pregunta7, pregunta8, pregunta9, pregunta10, pregunta11, pregunta12, pregunta13, pregunta14, pregunta15, pregunta16, pregunta17, pregunta18, pregunta19, pregunta20, pregunta21, pregunta22, pregunta23, pregunta24, pregunta25, pregunta26, pregunta27, pregunta28, pregunta29, pregunta30, pregunta31, pregunta32, pregunta33, pregunta34, pregunta35, pregunta36, pregunta37, pregunta38, pregunta39, pregunta40]
