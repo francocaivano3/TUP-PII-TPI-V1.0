@@ -1,7 +1,7 @@
 from partida import Partida
 from jugador import Jugador 
 from datos import * 
-from colorama import init, Fore, Back, Style
+#from colorama import init, Fore, Back, Style
 
 def agregarMazo(nuevaPartida:Partida, listaPreguntas:list):
         for pregunta in listaPreguntas:
@@ -15,11 +15,21 @@ def menu():
 
 def nuevoJuego():
     agregarMazo(nuevaPartida, listaPreguntas)
-    cantJugadores = input("Ingrese el número de jugadores (de 2 a 4)")
+    cantJugadores = int(input("Ingrese el número de jugadores (de 2 a 4)"))
     while cantJugadores < 2 or cantJugadores > 4:
-        print("Ingrese un número ")
+        cantJugadores = int(input("Ingrese un número de 2 a 4 "))
+    if cantJugadores == 2:
+        cantJugadores = 3
 
-    for i in range(1, 5):
+    elif cantJugadores == 3:
+        cantJugadores = 4
+    
+    elif cantJugadores == 4:
+        cantJugadores = 5
+    
+    
+
+    for i in range(1, cantJugadores):
         print("\n")
         jugador = Jugador(input(f"Ingrese el nombre del jugador {i}: "))
         nuevaPartida.ingresarJugadores(jugador)
