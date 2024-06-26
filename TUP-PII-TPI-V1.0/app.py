@@ -15,9 +15,13 @@ def menu():
 
 def nuevoJuego():
     agregarMazo(nuevaPartida, listaPreguntas)
-    cantJugadores = int(input("Ingrese el número de jugadores (de 2 a 4)"))
-    while cantJugadores < 2 or cantJugadores > 4:
-        cantJugadores = int(input("Ingrese un número de 2 a 4 "))
+    try:
+        cantJugadores = int(input("Ingrese el número de jugadores (de 2 a 4): "))
+    except TypeError:
+        cantJugadores = int(input("Ingrese el NÚMERO de jugadores (de 2 a 4): "))
+    except cantJugadores < 2 or cantJugadores > 4:
+        cantJugadores = int(input("Ingrese un número de 2 a 4: "))
+
     if cantJugadores == 2:
         cantJugadores = 3
 
