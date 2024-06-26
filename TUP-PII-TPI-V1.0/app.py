@@ -15,7 +15,9 @@ def menu():
 
 def nuevoJuego():
     agregarMazo(nuevaPartida, listaPreguntas)
-    
+    cantJugadores = input("Ingrese el número de jugadores (de 2 a 4)")
+    while cantJugadores < 2 or cantJugadores > 4:
+        print("Ingrese un número ")
 
     for i in range(1, 5):
         print("\n")
