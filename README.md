@@ -4,7 +4,7 @@
 <b>Franco Caivano 53650</b> <br>
 <b>Sebastian Corfield 53339</b><br>
 <h2>Materia y comisión:</h2>
-Comisión 1TUP7 <br>
+Comisión 1TUP7<br>
 2024<br>
 Programación 2 <br>
 

@@ -8,7 +8,7 @@ class Jugador:
         self.__cantRespuestasAcertadas:int = 0
         self.__puntuacion:int = 0
         self.__id:int = Jugador.jugador_id()
-          
+        self.__beneficio:bool = True
     
     @property
     def nombre(self):
@@ -18,6 +18,14 @@ class Jugador:
     def id(self):
         return self.__id
     
+    @property 
+    def beneficio(self):
+        return self.__beneficio
+
+    @beneficio.setter
+    def beneficio(self, valor):
+        self.__beneficio = valor
+
     @property
     def turno(self):
         return self.__turno
@@ -56,19 +64,16 @@ class Jugador:
 
         respuestaSeleccionada = input('Seleccione la opción correcta: ')
         while respuestaSeleccionada != "1" and respuestaSeleccionada != "2" and respuestaSeleccionada != "3" and respuestaSeleccionada != "4":
-            print('Respuesta incorrecta.')
             respuestaSeleccionada = input('Seleccione una opción válida: ')
             
 
         if tarjeta.opciones[int(respuestaSeleccionada)-1][1]:
-            print('Respuesta correcta!')
+        
             self.puntuacion = partida.modificarPuntuacion(self, tarjeta)
             self.cantRespuestasAcertadas = self.cantRespuestasAcertadas + 1
-            print(f"Cantidad de respuestas acertadas de {self.nombre}: {self.cantRespuestasAcertadas}")
+            return True
         else:
-            print(f'Incorrecto, la respuesta es: {tarjeta.respuestaCorrecta}')
-
-        print(f"La puntuación de {self.nombre} ahora es: {self.puntuacion}") 
+            return False
 
 
     def __str__(self):

@@ -34,7 +34,6 @@ class Partida():
         if len(self.mazo) > 0:
             tarjetaSacada = random.choice(self.mazo)
             self.mazo.remove(tarjetaSacada)
-            # print(tarjetaSacada)
             return tarjetaSacada
         else:
             return 0
@@ -47,7 +46,6 @@ class Partida():
     
     def mostrarRanking(self, partida):
         ranking = sorted(partida.listaJugadores, key=lambda x: x.puntuacion, reverse=True)
-        # print("\nRanking:")
-        for indice, jugador in enumerate(ranking):
-            print(f"{indice + 1}. Nombre: {jugador.nombre}, puntuación: {jugador.puntuacion}") #quitar
+        return ranking  
+        
 

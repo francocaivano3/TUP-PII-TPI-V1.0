@@ -43,16 +43,11 @@ class Tarjeta():
     def opciones(self):
         return self.__opciones
 
-    # @property
-    # def respuestaCorrecta(self):
-    #     return self.__respuestaCorrecta
 
     def agregarOpcion(self, opcion:Opcion):
 
         self.__opciones.append([opcion.opcion, opcion.correcta])
 
-        # if opcion.correcta:
-        #     self.__respuestaCorrecta = opcion
 
   
     def colorCategoria(self):
@@ -72,9 +67,7 @@ class Tarjeta():
         random.shuffle(self.opciones)
         
         opcionesStr = '\n'.join(f'Opción {i+1}: {opcion[0]}' for i, opcion in enumerate(self.__opciones))
-        print(self.colorCategoria())
-        print(bordeSuperior)
-        return f'Tarjeta número: {self.numTarjeta}\n\nCategoría: {self.categoria}\n\n{self.pregunta}\nOpciones:\n\n{opcionesStr}\n{bordeInferior}'
+        return f'{self.colorCategoria()}\n{bordeSuperior}\nTarjeta número: {self.numTarjeta}\n\nCategoría: {self.categoria}\n\n{self.pregunta}\nOpciones:\n\n{opcionesStr}\n{bordeInferior}'
         
      
       

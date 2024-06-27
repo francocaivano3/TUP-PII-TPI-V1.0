@@ -1,7 +1,6 @@
 from partida import Partida
 from jugador import Jugador 
 from datos import * 
-#from colorama import init, Fore, Back, Style
 
 def agregarMazo(nuevaPartida:Partida, listaPreguntas:list):
         for pregunta in listaPreguntas:
@@ -10,7 +9,7 @@ def agregarMazo(nuevaPartida:Partida, listaPreguntas:list):
 print("\nBienvenidos/as.")
 
 def menu():
-    print("\n1- Iniciar nuevo juego.\n2- Mostrar puntuaciones\n3- Finalizar")
+    print("\n1- Iniciar nuevo juego.\n2- Mostrar puntuaciones de la última partida.\n3- Finalizar.")
     
 
 def nuevoJuego():
@@ -42,24 +41,47 @@ def nuevoJuego():
         nuevaPartida.ingresarJugadores(jugador)
         print(f"Se ha añadido el jugador número {i}: {jugador.nombre}")
         
+    ronda = 0
 
     while len(nuevaPartida.mazo) > 0:
+        ronda = ronda + 1
         
         for jugador in nuevaPartida.listaJugadores:
             
             if jugador.turno == True and len(nuevaPartida.mazo) > 0:
-                
-                if jugador.cantRespuestasAcertadas == 3: 
+                if jugador.cantRespuestasAcertadas == 3 and jugador.beneficio: 
+                    jugador.beneficio = False
+
                     print("\n════════════════════════════════════════════════════════")
                     print(f"El jugador {jugador.nombre} tiene el beneficio del turno extra!")
                     print("════════════════════════════════════════════════════════")
+
                     tarjeta = nuevaPartida.generarPregunta()
+                    print(f"{tarjeta}")
+                    print(f"\nRonda: {ronda}")
                     print(f"Turno del jugador N°{jugador.id}: {jugador.nombre}")
-                    jugador.responder(tarjeta, nuevaPartida)
+
+                    if jugador.responder(tarjeta, nuevaPartida):
+                        print("\nRespuesta correcta!")
+                        print(f"\nCantidad de respuestas acertadas de {jugador.nombre}: {jugador.cantRespuestasAcertadas}")
+                    else:
+                        print(f'Incorrecto, la respuesta es: {tarjeta.respuestaCorrecta}')
+
+                print(f"La puntuación de {jugador.nombre} ahora es: {jugador.puntuacion}")
                 
+                print(f"\nRonda: {ronda}")
                 tarjeta = nuevaPartida.generarPregunta()
+                print(tarjeta)
+                
                 print(f"Turno del jugador N°{jugador.id}: {jugador.nombre}")
-                jugador.responder(tarjeta, nuevaPartida)
+
+                if jugador.responder(tarjeta, nuevaPartida):
+                    print("\nRespuesta correcta!")
+                    print(f"\nCantidad de respuestas acertadas de {jugador.nombre}: {jugador.cantRespuestasAcertadas}")
+                else:
+                    print(f'Incorrecto, la respuesta es: {tarjeta.respuestaCorrecta}')
+
+                print(f"La puntuación de {jugador.nombre} ahora es: {jugador.puntuacion}") 
 
     print("\n════════════════════")    
     print('Ha acabado el juego.')
@@ -76,7 +98,10 @@ while True:
 
     elif opt == "2":
         try: 
-             nuevaPartida.mostrarRanking(nuevaPartida)   
+            ranking =  nuevaPartida.mostrarRanking(nuevaPartida)
+            print("\nRanking\n") 
+            for indice, jugador in enumerate(ranking):
+                print(f"{indice + 1}. Nombre: {jugador.nombre}, puntuación: {jugador.puntuacion}")  
         except:
             print("\nPrimero debe jugar una partida")
 
