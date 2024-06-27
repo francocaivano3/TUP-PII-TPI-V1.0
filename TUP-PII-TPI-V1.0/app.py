@@ -15,11 +15,14 @@ def menu():
 
 def nuevoJuego():
     agregarMazo(nuevaPartida, listaPreguntas)
-    try:
-        cantJugadores = int(input("Ingrese el número de jugadores (de 2 a 4): "))
-    except TypeError:
-        cantJugadores = int(input("Ingrese el NÚMERO de jugadores (de 2 a 4): "))
-    except cantJugadores < 2 or cantJugadores > 4:
+    while True:
+        try:
+            cantJugadores = int(input("Ingrese el número de jugadores (de 2 a 4): "))
+            break
+        except ValueError:
+            print("No ha ingresado un número")
+            
+    while cantJugadores < 2 or cantJugadores > 4:
         cantJugadores = int(input("Ingrese un número de 2 a 4: "))
 
     if cantJugadores == 2:
@@ -35,10 +38,10 @@ def nuevoJuego():
 
     for i in range(1, cantJugadores):
         print("\n")
-        jugador = Jugador(input(f"Ingrese el nombre del jugador {i}: "))
+        jugador = Jugador(input(f"Ingrese el nombre del jugador {i}: "))             
         nuevaPartida.ingresarJugadores(jugador)
         print(f"Se ha añadido el jugador número {i}: {jugador.nombre}")
-
+        
 
     while len(nuevaPartida.mazo) > 0:
         

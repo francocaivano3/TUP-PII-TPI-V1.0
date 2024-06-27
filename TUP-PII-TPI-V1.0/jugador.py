@@ -1,4 +1,3 @@
-# from partida import Partida
 from tarjeta import Tarjeta
 
 class Jugador:
@@ -70,7 +69,6 @@ class Jugador:
             print(f'Incorrecto, la respuesta es: {tarjeta.respuestaCorrecta}')
 
         print(f"La puntuación de {self.nombre} ahora es: {self.puntuacion}") 
-         #ver si anda sin repetir dos veces el input
 
 
     def __str__(self):

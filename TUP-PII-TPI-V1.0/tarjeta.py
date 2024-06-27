@@ -9,7 +9,7 @@ class Tarjeta():
     def __init__(self, pregunta:str, categoria:Categoria):
         self.__pregunta:str = pregunta
         self.__opciones: list = []
-        self.__numTarjeta = Tarjeta.addNumTarjeta()
+        self.__numTarjeta = Tarjeta.__addNumTarjeta()
         self.__respuestaCorrecta = None
         self.__categoria = categoria
 
@@ -19,7 +19,7 @@ class Tarjeta():
         return self.__numTarjeta
 
     @classmethod
-    def addNumTarjeta(cls):
+    def __addNumTarjeta(cls):
         cls.__numTarjeta += 1
         return cls.__numTarjeta
 
